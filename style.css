@@ -1,0 +1,134 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	background-image : linear-gradient(120deg,#304352 ,#d7d2cc);
+	color: white;
+	font-family: "Poppins",sans-serif; 
+}
+header{
+	font-size: 1.5rem;
+}
+
+header,form{
+	min-height: 20vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+form button{
+	padding: 1.15rem;
+	font-size: 2rem;
+	border:2px;
+	border-color: white;
+	background: white;
+}
+form input{
+	padding: 0.95rem;
+	font-size: 2rem;
+	border-radius: 20px;
+}
+form button{
+	color: black;
+	background: white;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	border-radius: 20px;
+}
+form button:hover{
+	background: black;
+	color: white
+}
+
+.todo-container{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.todo-list{
+	min-width: 50%;
+	list-style: none;
+	
+}
+.todo{
+	margin: 0.5rem;
+	background: white;
+	color: black;
+	font-size: 1.5rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	transition: all 0.5s ease;
+	border-radius: 20px;
+}
+.todo li{
+	flex: 1;
+}
+.trash-btn, .complete-btn{
+	background:black;
+	color: white;
+	border-radius: 20px;
+	padding: 1rem;
+	cursor: pointer;
+	font-size: 1rem;
+}
+.complete-btn{
+	background: rgb(75, 175, 75);
+}
+.todo-item{
+	padding: 0rem 0.5rem;
+}
+
+.fa-trash,.fa-check{
+	pointer-events: none;
+}
+.complete-btn{
+	text-decoration: line-through;
+	opacity: 0.8;
+}
+.fall{
+	transform: translateY(8rem) rotateZ(20deg);
+	opacity: 0;
+}
+select{
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	outline: none;
+	border: none;
+}
+.select{
+	margin: 1rem;
+	position: relative;
+	overflow: hidden;
+}
+select{
+	color: black;
+	width: 12rem;
+	height: 4.3rem;
+	cursor: pointer;
+	font-size: 1.1rem;
+	font-weight: bold;
+	align-items: center;
+	justify-content: center;
+}
+.select::after{
+	content: "\25BC";
+	position: absolute;
+	background: black;
+	top: 0;
+	right: 0;
+	padding: 2rem;
+	pointer-events: none;
+	transition: all 0.3s ease;
+}
+.filter-todo:hover{
+	background-color: lightgray;
+}
+.select:hover::after{
+	background: white;
+	color: lightgray;
+}
